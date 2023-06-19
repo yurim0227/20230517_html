@@ -1,13 +1,38 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div>
+        <table>
+            <tr>
+                <td>내용 1</td>
+                <td>내용 2</td>
+                <td>내용 3</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
         <figure>
             <figcaption>[표/그림]제목</figcaption>
             <table border="1">
@@ -37,40 +62,40 @@
                         <td>김영희</td>
                     </tr>
                 </tbody>
+
             </table>
             <figcaption>[표/그림]제목</figcaption>
         </figure>
         <table border="1">
             <caption>[표1 제목]</caption>
-                <tr>
-                    <th>이름</th>
-                    <th>홍길동</th>
-                    <th>김영희</th>
-                </tr>
-                <tr>
-                    <th>1111111</th>
-                    <td colspan="2" rowspan="2">2111111 31</td>
-                </tr>
-                <tr>
-                    <th>1111111</th>
-                </tr>
-                <tr>
-                    <th rowspan="2">2111111</th>
-                    <td>2111111</td>
-                    <th>3111111</th>
-                </tr>
-                <tr>
-                    <td>2111111</td>
-                    <td>3111111</td>
-                </tr>
-                <caption>[표2 제목]</caption>
+            <tr>
+                <th>이름</th>
+                <th>홍길동</th>
+                <th>김영희</th>
+            </tr>
+            <tr>
+                <th>111111</th>
+                <td colspan="2" rowspan="2">2111111 31</td>
+            </tr>
+            <tr>
+                <th>1111111</th>
+            </tr>
+            <tr>
+                <th rowspan="2">2111111</td>
+                <td>2111111</td>
+                <th>3111111</th>
+            </tr>
+            <tr>
+                <td>2111111</td>
+                <td>3111111</td>
+            </tr>
+            <caption>[표2 제목]</caption>
         </table>
     </div>
     <hr>
     <div>
         <div>목록타이틀</div>
         <ul>
-            ul안에는 자식으로 li태그만 존재. innerText도 작성하지 마세요.
             <li>목록1</li>
             <li>목록2</li>
             <li>목록3</li>
@@ -89,18 +114,24 @@
             <dd>목록2</dd>
             <dd>목록3</dd>
         </dl>
+
     </div>
+
 
     <div>
         <pre>
             안녕하세요. 
-    태그는 수평선 분할시에 사용합니다.
+    태그는 수평분할시에 사용합니다. 
             이렇게
         </pre>
     </div>
     <hr>
 
-    <div>Lorem <abbr title="abbr">ipsum</abbr> <cite>dolor</cite> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    <div>Lorem <abbr title="abbr">ipsum</abbr> <cite>dolor</cite> sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.</div>
     <div title="abbr">Hello Java div</div>
     <div>Hello Java div</div>
 
@@ -108,15 +139,13 @@
     <div>Hello <blockquote>인용 내용</blockquote> Java div</div>
     <div>Hello Java div</div>
     <hr>
-    <h4 >Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java 10</h2>
-    <h4 a = "b" c = "100" d = 'ej kim"s' >
-        Hello<br><br><br>Java 
-        10</h2>
-    <h2     a
-     = "b" c = '100' d="ej kim's">Hello Java 10</h2>
-    <h2 a = "b" c = '100' d='ej kim"s'>Hello Java 10</h2>
-    <h2 a="b" c="100" d="ej kim">Hello Java 10</h2>
-    <h1 a="b" c="100" d="ej kim">Hello <smaill><smaill>Java</smaill></smaill> 10</h2>
-    <h6 a="b" c="100" d="ej kim">Hello Java 10</h2>
+    <h4>Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java 10</h4>
+    <h4 a="b" c='100' d='ej kim"s'>
+        Hello<br><br><br>Java
+        10</h4>
+    <h2 a="b" c='100' d="ej kim">Hello <b>Java</b> 10</h2>
+    <h1 a="b" c='100' d="ej kim">Hello <small><small>Java</small></small> 10</h1>
+    <h6 a="b" c='100' d="ej kim">Hello Java 10</h6>
 </body>
+
 </html>
