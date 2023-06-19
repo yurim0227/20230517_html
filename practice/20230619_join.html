@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./index.html" method="get">
+        <table>
+            <tr>
+                <th><label>이름</label></th>
+                <td><input checked type="text" required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>아이디</label></th>
+                <td><input type="text" autofocus required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>비밀번호</label></th>
+                <td><input type="password" minlength="6" maxlength="12" required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>비밀번호 확인</label></th>
+                <td><input type="password" minlength="6" maxlength="12" required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>비밀번호 힌트/답변</label></th>
+                <td>
+                    <select>
+                        <option value="" selected>선택하세요</option>
+                        <option value="30">졸업한 초등학교 이름은?</option>
+                        <option value="31">제일 친한 친구의 핸드폰 번호는?</option>
+                        <option value="32">아버지 성함은?</option>
+                        <option value="33">어머니 성함은?</option>
+                        <option value="34">어릴 적 내 별명은?</option>
+                        <option value="35">가장 아끼는 물건은?</option>
+                        <option value="36">좋아하는 동물은?</option>
+                        <option value="37">좋아하는 색깔은?</option>
+                        <option value="38" ></option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>답변</label></th>
+                <td><input type="text"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>이메일</label></th>
+                <td><input type="email"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>전화번호</label></th>
+                <td><input type="tel"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th><label>메일/sns 정보 수신</label></th>
+                <td>
+                    <input type="radio" name="radio" id="send"><label for="send">수신</label>
+                    <input type="radio" name="radio" id="noSend"><label for="noSend">수신 거부</label>
+                </td>
+            </td>
+            </tr>
+            <tr>
+                <th>관심분야</th>
+                <td>
+                    <input type="checkbox" name="check"><label>생두</label>
+                    <input type="checkbox" name="check"><label>원두</label>
+                    <input type="checkbox" name="check"><label>로스팅</label>
+                    <input type="checkbox" name="check"><label>핸드드립</label>
+                    <input type="checkbox" name="check"><label>에스프레소</label>
+                    <input type="checkbox" name="check"><label>창업</label>
+                </td>
+            </tr>
+            
+        </table>
+        <hr>
+        <button type="submit">회원가입</button>
+        <button type="reset">취소</button>
+    </form>
+</body>
+</html>

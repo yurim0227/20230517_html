@@ -6,26 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <fieldset>
-        <legend>로그인</legend>
-        <table>
-            <tbody>
+    <form action="" method="get">
+        <fieldset>
+            <legend>로그인</legend>
+            <table>
                 <tr>
-                    <th><label for="idid">id</label></th>
-                    <!-- <td><input type="text" name="idd" size="5" maxlength="10"></td> -->
-                    <td><input type="text" name="idd" maxlength="10" id="idid"></td>
+                    <td><label>아이디</label></td>
+                    <td><input type="text" name="id"></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <th><label>password</label></th>
-                    <td><input type="password" name="pwd"></td>
+                    <td><label>패스워드</label></td>
+                    <td><input type="password" name="pw"></td>
+                    <td></td>
                 </tr>
-                <tr>
-                    <td><button type="submit">확인</button></td>
-                    <td><button type="submit">전달/제출</button></td>
-                    <td><button type="submit">깨끗하게취소</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </fieldset>
+            </table>
+            <button type="submit">확인</button>
+            <input type="submit" value="전달/제출">
+            <button type="reset">깨끗하게 취소</button>
+        </fieldset>
+    </form>
 </body>
 </html>
