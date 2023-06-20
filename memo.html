@@ -1,0 +1,43 @@
+inline 속성의 태그들 (display:inline)
+    -줄바꿈x, 태그 사이 공간이 있으면 그 공간에 배치
+    -width와 height 지정되지 않음.
+    -(inline-block인 input, img는 width,height먹힘)
+    -<a>,<strong>등
+block 속성의 태그들 (display:block)
+    -줄바꿈O, 공간이 있어도 다음줄에 생성 
+    -<div>,<p>,<form>등
+영역 태그들
+    -영역을 구분할때 사용하는 태그
+    -<p>,<div>,<span>
+문자 태그들
+    -<br>,<hr>,<p>,<h2>,<em>
+목록 태그들
+    -<ul>-<li>
+    -<ol start=”2” type=”A”>-<li>
+    -<dl>-<dt><dd>
+표 태그들
+    -<table>,<th>,<tr>,<td>
+속성 name 이란
+    a. form 태그와 함께 사용됨.
+    b. 사용자입력 태그
+        1. <input name="pwd" value="abc">
+        2. <select name="category"> - 선택value="book"
+        3. <textarea name="content">
+        4. <datalist name="size">
+    c. submit 발생하면 query string 만들어질때 사용됨.
+        1. ?name값=value값&name값=value값&name값=value값
+        2. ?pwd=abc&category=book
+속성 id 란
+    a. 모든 태그에 속성지정 가능함.
+    b. unique한 식별자값을 가짐
+    c. 사용예) <div id="id_1"><input id="id_2">
+        1. 페이지내부이동 <a href="#id_1">
+        2. div와 label을 연결(label클릭시 input에 focus또는 checked됨) <label for="id_1">
+        3. js event 등록에 사용됨. -TODO
+속성 class 란
+    a. 모든 태그에 속성지정 가능함.
+    b. 공통된 그룹값을 가짐
+    c. 사용예) <div class="color_red"><input class="border_3">
+        1. 같은 class값에 같은 style을 적용함.
+        2. div와 label을 연결(label클릭시 input에 focus또는 checked됨) <label for="id_1">
+        3. js event 등록에 사용됨. -TODO
