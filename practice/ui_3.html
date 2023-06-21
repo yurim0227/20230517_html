@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="result.html" method="get">
+        <fieldset>
+            <p>회원여부: 
+                <label><input checked="" type="radio" name="member" value="yes">회원</label>
+                <label><input type="radio" name="member" value="no">비회원</label>
+            </p>
+            <p>취미(중복선택): 
+                <label><input type="checkbox" name="hobby" value="book" >독서</label>
+                <label><input checked="" type="checkbox" name="hobby" value="movie" selected>영화</label>
+                <label><input type="checkbox" name="hobby" value="music">음악</label>
+                <label><input type="checkbox" name="hobby" value="sport">스포츠</label>
+            </p>
+            <p>직업:
+                <label>
+                    <select size="4">
+                        <option value=1 selected>학생</option>
+                        <option value=2>회사원</option>
+                        <option value=3>교사</option>
+                        <option value=4>자영업</option>
+                        <option value=5>기타</option>
+                    </select>
+                </label>
+            </p>
+            <p>남기고 싶은 말:
+                <br>
+                <textarea cols="70" rows="5" placeholder="150자 내외로 글을 남겨주세요."></textarea>
+            </p>
+            <button type="reset">초기화</button>
+            <button type="submit">전송</button>
+        </fieldset>
+    </form>
+</body>
+</html>
