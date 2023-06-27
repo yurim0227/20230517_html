@@ -5,32 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        form{
-            width: 61%;
+        form {
+            width: 70%;
         }
-        input[type=text] {
-            width: 98%;
+        p {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .first {
+            text-align: center;
+            font-weight: bold;
+            width: 65px;
+            margin-right: 10px;
+        }
+        .second {
+            margin-left: 400px;
+            position: absolute;
+        }
+        textarea {
+            resize: none;
+        }
+        button[type=submit] {
+            margin-left: 150px;
         }
         hr {
 	        margin: 20px 0;
-            width: 61%;
+            width: 70%;
         }
-        .table.second th {
+        table{
+            width: 70%;
+        }
+        th {
             background-color: #F29877;
             color: white;
             text-align: center;
         }
-        .table.second tr {
+        tr {
             background-color: #FFFFE0;
         }
-        .title {
-            width: 500px;
+        td:nth-of-type(1) {
+            width: 5%;
         }
-        .user {
-            width: 100px;
+        td:nth-of-type(3) {
+            width: 70px;
         }
-        .date {
-            width: 150px;
+        td:nth-of-type(4) {
+            width: 15%;
+        }
+        td:nth-of-type(5) {
+            width: 15%;
+        }
+        td:nth-of-type(6) {
+            width: 5%;
         }
     </style> 
 </head>
@@ -38,49 +65,37 @@
     <form action="insert.no" method="post">
         <fieldset>
             <legend>공지사항 작성하기</legend>
-            <table class="table first">
-                <tr>
-                    <td><label>제목</label></td>
-                    <td>
-                        <input type="text" name="title" required placeholder="제목을 입력하시오.">
-                    </td>
-                    <td><label>* name속성값은 "title"부여, 필수입력사항 속성부여</label></td>
-                </tr>
-                <tr>
-                    <td><label>내용</label></td>
-                    <td>
-                        <textarea cols="40" rows="10" name="content" placeholder="내용을 입력하시오."required></textarea>
-                    </td>
-                    <td><label>* name속성값은 "content"부여, 필수입력사항 속성부여</label></td>
-                </tr>
-                <tr>
-                    <td><label>첨부파일</label></td>
-                    <td>
-                        <input type="file" name="uploadfile">
-                    </td>
-                    <td><label>* name속성값은 "uploadfile"부여</label></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <button type="submit">작성하기</button>
-                    </td>
-                </tr>
-            </table>
+            <p>
+                <label class="first">제목</label>
+                <input type="text" size="41" name="title" required placeholder="제목을 입력하시오.">
+                <label class="second">* name속성값은 "title"부여, 필수입력사항 속성부여</label>
+            </p>
+            <p>
+                <label class="first">내용</label>
+                <textarea cols="40" rows="10" name="content" placeholder="내용을 입력하시오."required></textarea>
+                <label class="second">* name속성값은 "content"부여, 필수입력사항 속성부여</label>
+            </p>
+            <p>
+                <label class="first">첨부파일</label>
+                <input type="file" name="uploadfile">
+                <label class="second">* name속성값은 "uploadfile"부여</label>
+            </p>
+            <button type="submit">작성하기</button>
         </fieldset>
     </form>
     <hr>
-    <table border="1" class="table second">
-        <tr class="top">
+    <table border="1">
+        <tr>
             <th>
                 번호
             </th>
             <th colspan="2">
                 제목
             </th>
-            <th class="user">
+            <th>
                 작성자
             </th>
-            <th class="date">
+            <th>
                 작성일
             </th>
             <th>
@@ -91,7 +106,7 @@
             <td>
                 9
             </td>
-            <td class="title">
+            <td>
                 공지사항 제목 9
             </td>
             <td>
@@ -187,7 +202,7 @@
                 124
             </td>
         </tr>
-        <tr class="bottom">
+        <tr>
             <th colspan="4">
                 전체공지사항 갯수
             </th>
