@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery dom event</title>
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.7.0.js"
+  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            console.log("여기 loadevent - jQuery read");
+        });
+        $(document).ready(function(){
+            console.log("여기 loadevent - $ read ");
+        });
+        jQuery(function(){
+            console.log("여기 loadevent - jQuery ");
+        });
+        $(function(){
+            console.log("여기 loadevent - $ ");
+        });
+
+        $(loadedHandler);
+
+        function loadedHandler(){
+            console.log("loadedHandler 호출");
+        }
+
+        // event 중에 load body가 모두 loading이 끝나면 발생하는 event
+        // onload / load : document가 모두 loading이 끝나면 발생하는 event
+        window.addEventListener("load", function(){
+            console.log("여기 loadevent - addEventListener");
+        });
+        window.onload = function(){
+            console.log("여기 loadevent");
+            var element1 = document.getElementById("content");
+            console.log(element1);
+
+            // window.onload 후에
+            // event 등록 코드
+            // $("#btnAdd").click(function aHandler(){
+            //     console.log("a 호출");
+            //     var element1 = document.getElementById("content");
+            //     console.log(element1);
+            // });
+            $("#btnAdd").click(aHandler);
+            $("#btnAdd2").click(aHandler);
+            $("#btnAdd3").click(aHandler);
+            $("#btnAdd4").click(aHandler);
+            $("#btnAdd5").click(aHandler);
+        };
+
+        // window.addEventListener("load", function(){
+        //     console.log("여기 loadevent - addEventListener");
+        // });
+        // event handler 정의 - 이 위치
+        // event handler 정의 - window.onload 무관한(밖) 위치
+        function aHandler(){
+            console.log("a 호출");
+            var element1 = document.getElementById("content");
+            console.log(element1);
+        }
+
+        // var element1 = $("#content");
+        var element1 = document.getElementById("content");
+        console.log(element1);
+        //aHandler();
+    </script>
+</head>
+<body>
+    <script>
+        // var element1 = $("#content");
+        var element1 = document.getElementById("content");
+        console.log(element1);
+    </script>
+    <div id="content">
+        <ul class="menu">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li id="select">menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+        </ul>
+    </div>
+
+    <script>
+        var element1 = $("#content");
+        console.log(element1);
+    </script>
+
+    <!-- <button id="btnAdd" onclick="aHandler();">추가</button> -->
+    <button id="btnAdd"">추가</button>
+
+    <script>
+        var element1 = $("#content");
+        console.log(element1);
+    </script>
+
+</body>
+</html>

@@ -34,7 +34,7 @@ body {
     margin: 88px auto 100px;
 }
 
-.content .title.first {
+.content .title.first, .content .title.second {
     margin-bottom: 50px;
 }
 
@@ -212,7 +212,7 @@ body {
 .content a:hover::after {
     content: ">";
     position: absolute;
-    right: 5px;
+    right: -20px;
 }
 
 .content .menu-list {
