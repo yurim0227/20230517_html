@@ -10,8 +10,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 main-menu, nav, output, ruby, section, summary,
 time, mark, audio, video
 {
@@ -182,27 +182,42 @@ body {
     color: #27620a;
 }
 
-.content .main-menu.third {
+.content .menu-box {
+    margin: 0 auto;
+    width: 1200px;
     position: relative;
 }
 
-.content .menu-bar {
+.content nav {
+    top: 0;
+    width: 254px;
+    height: 100%;
+    left: 50%;
+    /* margin-left: -600px; */
     position: absolute;
 }
 
-.content .main-menu.third::after {
+.content .menu-bar > ul {
+    top: 120px;
+    /* position: fixed; */
+}
+
+.content .menu-box::after {
     display: block;
     content: "";
     clear: both;
+}
+
+.content .menu-bar li {
+    width: 185px;
 }
 
 .content a {
     text-decoration: none;
     font-family: Century Gothic,Apple SD Gothic Neo,Sans-serif;
     font-size: 20px;
-    width: 185px;
     display: inline-block;
-    padding: 17px 0;
+    padding: 17px 23px 17px 0;
 }
 
 .content a:hover {
@@ -211,8 +226,7 @@ body {
 
 .content a:hover::after {
     content: ">";
-    position: absolute;
-    right: -20px;
+    right: 5px;
 }
 
 .content .menu-list {
