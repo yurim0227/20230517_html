@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
     <link href="/resources/css/menu.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <style>
         .idEnbl {
             width: 100%;
@@ -349,8 +348,9 @@
                         <div class="cont_box">
                             <section class="visible">
                                 <nav class="menu_list">
+                                    <ul id="move_bar" style="bottom: 50px;">
                                     <!-- <ul id="move_bar" style="top: 120px; position: fixed;"> -->
-                                    <ul id="move_bar">
+                                    <!-- <ul id="move_bar"> -->
                                         <li data-idx="0" style="width: 185px;">
                                             <a href="#" class="menu-sidebar-anchor" role="none" type="button" style="cursor: pointer;">
                                                 COFFEE
@@ -2701,65 +2701,651 @@
         </div>
     </div>
     <script>
-        // var list1 = querySelector("#move_bar>li");
-        // var list2 = document.getElementsByClassName("menu-group");
-        // for(var i=0;i<list1.length;i++){
-        //     list1[i].addEventListener("click", function(){
-        //         list2[i].scrollIntoView({behavior : 'smooth', block : 'start'});
-        //     });
-        // }
-
-        // [data-idx="0"]{
-        // }
-        // document.getElementsByClassName('menu-group').scrollIntoView(true);
-        // const toButton = document.querySelector("#btn_top");
-        // $("#menu_list").animate({
-        //     scrollTop : $("#ulId0").offset().top
-        // }, 500);
-        // const toButton = document.querySelector([data-idx="0"]);
-
-        // document.querySelector(".menu_view_cont").style.display = "none";
         var elementList = document.getElementsByClassName("menu_box");
         var menuViewContList = document.getElementsByClassName("menu_view_cont");
+        var btnAreaList = document.getElementsByClassName("btn_area");
+        var btnPrevList = document.getElementsByClassName("btn_prev");
+        var btnNextList = document.getElementsByClassName("btn_next");
+        const navbar = document.querySelector('#move_bar');
+        // const navbarTop = navbar.getBoundingClientRect().top;
         for(var i=0;i<elementList.length;i++){
             menuViewContList[i].style.display = "none";
-            // elementList[i].addEventListener("click", function(){
-            //     console.log("aa");
-            //     document.querySelector(".menu_list_cont").style.display = "none";
-            //     // document.querySelector(".menu_view_cont").style.display = "block";
-            //     menuViewContList[i].style.display = "block";
-            // });
+            function showScroll(){
+                if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 -  100)){
+                    navbar.style.top = "120px";
+                    navbar.style.position = "fixed";
+                }else if(window.scrollY >= (6978.66650390625 - 100)){
+                    document.getElementById("move_bar").style.top = "auto";
+                    document.getElementById("move_bar").style.position = "absolute";
+                } else {
+                    navbar.style.cssText = "bottom: 50px";
+                }
+            }
+            window.addEventListener('scroll', showScroll);
+            elementList[i].addEventListener("click", function(){
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < 2258.666748046875){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= 2258.666748046875){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
             elementList[0].addEventListener("click", function(){
                 document.querySelector(".menu_list_cont").style.display = "none";
                 menuViewContList[0].style.display = "block";
+                window.scrollTo({top: 2000});
             });
             elementList[1].addEventListener("click", function(){
                 document.querySelector(".menu_list_cont").style.display = "none";
                 menuViewContList[1].style.display = "block";
+                window.scrollTo({top: 2000});
             });
             elementList[2].addEventListener("click", function(){
                 document.querySelector(".menu_list_cont").style.display = "none";
                 menuViewContList[2].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[3].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[3].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[4].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[4].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[5].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[5].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[6].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[6].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[7].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[7].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[8].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[8].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[9].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[9].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[10].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[10].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[11].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[11].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[12].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[12].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[13].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[13].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[14].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[14].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[15].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[15].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[16].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[16].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[17].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[17].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[18].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[18].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[19].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[19].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[20].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[20].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[21].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[21].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[22].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[22].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[23].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[23].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[24].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[24].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            elementList[25].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "none";
+                menuViewContList[25].style.display = "block";
+            });
+            document.querySelectorAll(".btn_area>a").forEach(item=>{
+                item.setAttribute("href","javascript:void(0)");
+            })
+            btnAreaList[i].addEventListener("click", function(){
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0; i<menuViewContList.length; i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            document.querySelectorAll(".btn_prev").forEach(item=>{
+                item.setAttribute("href","javascript:void(0)");
+            })
+            document.querySelectorAll(".btn_next").forEach(item=>{
+                item.setAttribute("href","javascript:void(0)");
+            })
+            btnPrevList[0].addEventListener("click", function(){
+                menuViewContList[0].style.display = "none";
+                menuViewContList[25].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[1].addEventListener("click", function(){
+                menuViewContList[1].style.display = "none";
+                menuViewContList[0].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[2].addEventListener("click", function(){
+                menuViewContList[2].style.display = "none";
+                menuViewContList[1].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[3].addEventListener("click", function(){
+                menuViewContList[3].style.display = "none";
+                menuViewContList[2].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[4].addEventListener("click", function(){
+                menuViewContList[4].style.display = "none";
+                menuViewContList[3].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[5].addEventListener("click", function(){
+                menuViewContList[5].style.display = "none";
+                menuViewContList[4].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[6].addEventListener("click", function(){
+                menuViewContList[6].style.display = "none";
+                menuViewContList[5].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[7].addEventListener("click", function(){
+                menuViewContList[7].style.display = "none";
+                menuViewContList[6].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[8].addEventListener("click", function(){
+                menuViewContList[8].style.display = "none";
+                menuViewContList[7].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[9].addEventListener("click", function(){
+                menuViewContList[9].style.display = "none";
+                menuViewContList[8].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[10].addEventListener("click", function(){
+                menuViewContList[10].style.display = "none";
+                menuViewContList[9].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[11].addEventListener("click", function(){
+                menuViewContList[11].style.display = "none";
+                menuViewContList[10].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[12].addEventListener("click", function(){
+                menuViewContList[12].style.display = "none";
+                menuViewContList[11].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[13].addEventListener("click", function(){
+                menuViewContList[13].style.display = "none";
+                menuViewContList[12].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[14].addEventListener("click", function(){
+                menuViewContList[14].style.display = "none";
+                menuViewContList[13].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[15].addEventListener("click", function(){
+                menuViewContList[15].style.display = "none";
+                menuViewContList[14].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[16].addEventListener("click", function(){
+                menuViewContList[16].style.display = "none";
+                menuViewContList[15].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[17].addEventListener("click", function(){
+                menuViewContList[17].style.display = "none";
+                menuViewContList[16].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[18].addEventListener("click", function(){
+                menuViewContList[18].style.display = "none";
+                menuViewContList[17].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[19].addEventListener("click", function(){
+                menuViewContList[19].style.display = "none";
+                menuViewContList[18].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[20].addEventListener("click", function(){
+                menuViewContList[20].style.display = "none";
+                menuViewContList[19].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[21].addEventListener("click", function(){
+                menuViewContList[21].style.display = "none";
+                menuViewContList[20].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[22].addEventListener("click", function(){
+                menuViewContList[22].style.display = "none";
+                menuViewContList[21].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[23].addEventListener("click", function(){
+                menuViewContList[23].style.display = "none";
+                menuViewContList[22].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[24].addEventListener("click", function(){
+                menuViewContList[24].style.display = "none";
+                menuViewContList[23].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnPrevList[25].addEventListener("click", function(){
+                menuViewContList[25].style.display = "none";
+                menuViewContList[24].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[0].addEventListener("click", function(){
+                menuViewContList[0].style.display = "none";
+                menuViewContList[1].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[1].addEventListener("click", function(){
+                menuViewContList[1].style.display = "none";
+                menuViewContList[2].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[2].addEventListener("click", function(){
+                menuViewContList[2].style.display = "none";
+                menuViewContList[3].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[3].addEventListener("click", function(){
+                menuViewContList[3].style.display = "none";
+                menuViewContList[4].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[4].addEventListener("click", function(){
+                menuViewContList[4].style.display = "none";
+                menuViewContList[5].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[5].addEventListener("click", function(){
+                menuViewContList[5].style.display = "none";
+                menuViewContList[6].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[6].addEventListener("click", function(){
+                menuViewContList[6].style.display = "none";
+                menuViewContList[7].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[7].addEventListener("click", function(){
+                menuViewContList[7].style.display = "none";
+                menuViewContList[8].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[8].addEventListener("click", function(){
+                menuViewContList[8].style.display = "none";
+                menuViewContList[9].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[9].addEventListener("click", function(){
+                menuViewContList[9].style.display = "none";
+                menuViewContList[10].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[10].addEventListener("click", function(){
+                menuViewContList[10].style.display = "none";
+                menuViewContList[11].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[11].addEventListener("click", function(){
+                menuViewContList[11].style.display = "none";
+                menuViewContList[12].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[12].addEventListener("click", function(){
+                menuViewContList[12].style.display = "none";
+                menuViewContList[13].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[13].addEventListener("click", function(){
+                menuViewContList[13].style.display = "none";
+                menuViewContList[14].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[14].addEventListener("click", function(){
+                menuViewContList[14].style.display = "none";
+                menuViewContList[15].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[15].addEventListener("click", function(){
+                menuViewContList[15].style.display = "none";
+                menuViewContList[16].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[16].addEventListener("click", function(){
+                menuViewContList[16].style.display = "none";
+                menuViewContList[17].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[17].addEventListener("click", function(){
+                menuViewContList[17].style.display = "none";
+                menuViewContList[18].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[18].addEventListener("click", function(){
+                menuViewContList[18].style.display = "none";
+                menuViewContList[19].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[19].addEventListener("click", function(){
+                menuViewContList[19].style.display = "none";
+                menuViewContList[20].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[20].addEventListener("click", function(){
+                menuViewContList[20].style.display = "none";
+                menuViewContList[21].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[21].addEventListener("click", function(){
+                menuViewContList[21].style.display = "none";
+                menuViewContList[22].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[22].addEventListener("click", function(){
+                menuViewContList[22].style.display = "none";
+                menuViewContList[23].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[23].addEventListener("click", function(){
+                menuViewContList[23].style.display = "none";
+                menuViewContList[24].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[24].addEventListener("click", function(){
+                menuViewContList[24].style.display = "none";
+                menuViewContList[25].style.display = "block";
+                window.scrollTo({top: 2000});
+            });
+            btnNextList[25].addEventListener("click", function(){
+                menuViewContList[25].style.display = "none";
+                menuViewContList[0].style.display = "block";
+                window.scrollTo({top: 2000});
             });
         }
-        document.querySelector(".btn_area").addEventListener("click", function(){
-            document.querySelector(".menu_list_cont").style.display = "block";
-            document.querySelector(".menu_view_cont").style.display = "none";
-        });
-        // var menuInfoList = document.getElementsByClassName("menu_info");
-        // for(var i=0;i<menuInfoList.length;i++){
-        //     menuInfoList[0].style.display = "block";
-        //     menuInfoList[1].style.display = "none";
-        // }
+        var menuSidebarAnchorList = document.getElementsByClassName("menu-sidebar-anchor");
+        var menuGroupList = document.getElementsByClassName("menu-group");
+        for(var i=0;i<menuSidebarAnchorList.length;i++){
+            menuSidebarAnchorList[i].setAttribute("href","javascript:void(0)");
+            menuSidebarAnchorList[0].addEventListener("click", function(){
+                menuGroupList[0].getBoundingClientRect().top;
+                window.scrollTo({top: 2258.666748046875, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[1].addEventListener("click", function(){
+                menuGroupList[1].getBoundingClientRect().top;
+                window.scrollTo({top: 2848.666748046875, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[2].addEventListener("click", function(){
+                menuGroupList[2].getBoundingClientRect().top;
+                window.scrollTo({top: 3438.666748046875, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[3].addEventListener("click", function(){
+                menuGroupList[3].getBoundingClientRect().top;
+                window.scrollTo({top: 4028.666748046875, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[4].addEventListener("click", function(){
+                menuGroupList[4].getBoundingClientRect().top;
+                window.scrollTo({top: 4618.66650390625, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[5].addEventListener("click", function(){
+                menuGroupList[5].getBoundingClientRect().top;
+                window.scrollTo({top: 5208.66650390625, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[6].addEventListener("click", function(){
+                menuGroupList[6].getBoundingClientRect().top;
+                window.scrollTo({top: 5798.66650390625, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[7].addEventListener("click", function(){
+                menuGroupList[7].getBoundingClientRect().top;
+                window.scrollTo({top: 6388.66650390625, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+            menuSidebarAnchorList[8].addEventListener("click", function(){
+                menuGroupList[8].getBoundingClientRect().top;
+                window.scrollTo({top: 6978.66650390625, behavior: "smooth"});
+                document.querySelector(".menu_list_cont").style.display = "block";
+                for(var i=0;i<menuViewContList.length;i++){
+                    menuViewContList[i].style.display = "none";
+                }
+                function showScroll(){
+                    if(window.scrollY > (2258.666748046875 - 1) && window.scrollY < (6978.66650390625 - 100)){
+                        navbar.style.top = "120px";
+                        navbar.style.position = "fixed";
+                    }else if(window.scrollY >= (6978.66650390625 - 100)){
+                        document.getElementById("move_bar").style.top = "auto";
+                        document.getElementById("move_bar").style.position = "absolute";
+                    } else {
+                        navbar.style.cssText = "bottom: 50px";
+                    }
+                }
+                window.addEventListener('scroll', showScroll);
+            });
+        }
 
-        document.querySelector(".btn_group button").addEventListener("click", function(){
-            document.querySelector(".btn_group button").classList.toggle("on");
-            document.querySelector(".btn_group button:nth-child(2)").classList.toggle("on");
-        });
-        document.querySelector(".btn_group button:nth-child(2)").addEventListener("click", function(){
-            document.querySelector(".btn_group button").classList.toggle("on");
-            document.querySelector(".btn_group button:nth-child(2)").classList.toggle("on");
-        });
+        document.querySelectorAll(".btn_group button").forEach(item=>{
+            item.addEventListener("click", function(){
+                document.querySelectorAll(".btn_group button").forEach(item=>{
+                    item.classList.toggle("on");
+                })
+            });
+        })
 
         const backToTopButton = document.querySelector("#btn_top");
         window.addEventListener("scroll", function(){
@@ -2805,19 +3391,6 @@
             }
         }
         title_2.addEventListener('click', handleClick2);
-
-        // $(function(){
-        //     var marginTop = parseInt($("#move_bar").css('margin-top'));
-        //     $(window).scroll(function(e) {
-        //         $("#move_bar").css("margin-top", marginTop - $(this).scrollTop());
-        //     });
-        // });
-        $(function(){
-            var marginLeft = parseInt($("#move_bar").css('margin-left'));
-            $(window).scroll(function(e) {
-                $("#move_bar").css("margin-left", marginLeft - $(this).scrollLeft());
-            });
-        });
     </script>
 </body>
 
