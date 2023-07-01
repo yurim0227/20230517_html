@@ -3339,12 +3339,33 @@
             });
         }
 
-        document.querySelectorAll(".btn_group button").forEach(item=>{
+        const element = document.querySelectorAll(".btn_group button")
+        // const element_1 = document.querySelectorAll(".btn_group button:nth-child(1)")
+        // const element_2 = document.querySelectorAll(".btn_group button:nth-child(2)");
+        element.forEach(item=>{
             item.addEventListener("click", function(){
-                document.querySelectorAll(".btn_group button").forEach(item=>{
+                element.forEach(item=>{
                     item.classList.toggle("on");
                 })
             });
+            //     element_1.forEach(item=>{
+            //         for(var i=0; i<26; i++){
+            //             element_1[i].className = "on";
+            //         }
+            //         item.classList.toggle("on");
+            //     })
+            //     element_2.forEach(item=>{
+            //         item.classList.toggle("on");
+            //     })
+            // });
+            // element[7].className = "on";
+            // element[8].className = "on";
+            // element[9].className = "on";
+            // element[10].className = "on";
+            // element[11].className = "on";
+            // element[12].className = "on";
+            // element[13].className = "on";
+            // element[16].className = "on";
         })
 
         const backToTopButton = document.querySelector("#btn_top");
