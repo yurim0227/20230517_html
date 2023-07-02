@@ -27,6 +27,7 @@
             // event 등록
             $('.c').on("blur", cntBlurHandler);
             $("[type=button]").on("click", calClickHandler);
+            $("[type=reset]").on("click", resetClickHandler);
         }
         // 각종 기능 함수들
         function cntBlurHandler(event){
@@ -57,6 +58,11 @@
             });
             $('.cTotalCnt').attr('value', totalCnt);
             $('.cTotalPrice').attr('value', totalPrice);
+        }
+        function resetClickHandler(event){
+            $('.p').attr('value', '');
+            $('.cTotalCnt').attr('value', '');
+            $('.cTotalPrice').attr('value', '');
         }
     </script>
 </head>
