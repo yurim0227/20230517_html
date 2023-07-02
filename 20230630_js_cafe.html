@@ -8,6 +8,18 @@
     <link href="/resources/css/reset.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/resources/css/reset.css"> -->
     <!-- style 지정 - 각자 실습 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border: 1px solid black;
+        }
+        input[type=text] {
+            border: none;
+        }
+    </style>
     <!-- -->
     <script>
         $(loadedHandler);
@@ -22,12 +34,29 @@
             console.log(event.target); // event.target == this
             console.log(event);
             // 각자 실습
+            var cnt = $(this).val();
+            var price = $(this).parent().prev().text();
+            var total = $(this).parent().next().children().attr('value', cnt * price);
         }
         function calClickHandler(event){
-            onsole.log(this);
+            console.log(this);
             console.log(event.target); // event.target == this
             console.log(event);
             // 각자 실습
+            var totalCnt = 0;
+            var totalPrice = 0;
+            $('.c').each(function() {
+                if(!isNaN($(this).val())) {
+                    totalCnt += parseInt($(this).val());
+                }
+            });
+            $('.p').each(function() {
+                if(!isNaN($(this).val())) {
+                    totalPrice += parseInt($(this).val());
+                }
+            });
+            $('.cTotalCnt').attr('value', totalCnt);
+            $('.cTotalPrice').attr('value', totalPrice);
         }
     </script>
 </head>
@@ -61,13 +90,15 @@
             <tr>
                 <th>합계</th>
                 <th></th>
-                <th><input type="text" name="cTotalCnt" id="cTotalCnt" class="c" readonly></th>
-                <th><input type="text" name="cTotalPrice" id="cTotalPrice" class="p" readonly></th>
+                <!-- <th><input type="text" name="cTotalCnt" id="cTotalCnt" class="c" readonly></th> -->
+                <!-- <th><input type="text" name="cTotalPrice" id="cTotalPrice" class="p" readonly></th> -->
+                <th><input type="text" name="cTotalCnt" id="cTotalCnt" class="cTotalCnt" readonly></th>
+                <th><input type="text" name="cTotalPrice" id="cTotalPrice" class="cTotalPrice" readonly></th>
             </tr>
             <tr>
                 <td colspan="4">
                     <input type="button" value="계산하기">
-                    <input type="reset" >
+                    <input type="reset">
                 </td>
             </tr>
         </table>
