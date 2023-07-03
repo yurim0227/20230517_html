@@ -3339,40 +3339,78 @@
             });
         }
 
-        // document.querySelectorAll(".btn_group button").forEach(item=>{
-        //     item.addEventListener("click", function(){
-        //         document.querySelectorAll(".btn_group button").forEach(item=>{
-        //             item.classList.toggle("on");
-        //         })
-        //     });
-        // })
-        const element = document.querySelectorAll(".btn_group button")
-        // const element_1 = document.querySelectorAll(".btn_group button:nth-child(1)")
-        // const element_2 = document.querySelectorAll(".btn_group button:nth-child(2)");
-        element.forEach(item=>{
+        document.querySelectorAll(".btn_group button").forEach(item=>{
             item.addEventListener("click", function(){
-                element.forEach(item=>{
+                document.querySelectorAll(".btn_group button").forEach(item=>{
                     item.classList.toggle("on");
                 })
             });
-            //     element_1.forEach(item=>{
-            //         for(var i=0; i<26; i++){
-            //             element_1[i].className = "on";
-            //         }
-            //         item.classList.toggle("on");
-            //     })
-            //     element_2.forEach(item=>{
-            //         item.classList.toggle("on");
-            //     })
-            // });
-            // element[7].className = "on";
-            // element[8].className = "on";
-            // element[9].className = "on";
-            // element[10].className = "on";
-            // element[11].className = "on";
-            // element[12].className = "on";
-            // element[13].className = "on";
-            // element[16].className = "on";
+            for(var i=0; i<elementList.length; i++){
+                elementList[i].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                    document.querySelectorAll(".btn_group button:nth-child(2)").forEach(item=>{
+                        item.classList.remove("on");
+                    })
+                })
+                btnPrevList[i].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                    document.querySelectorAll(".btn_group button:nth-child(2)").forEach(item=>{
+                        item.classList.remove("on");
+                    })
+                })
+                btnNextList[i].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                    document.querySelectorAll(".btn_group button:nth-child(2)").forEach(item=>{
+                        item.classList.remove("on");
+                    })
+                })
+                menuViewContList[7].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+                menuViewContList[8].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+                menuViewContList[9].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+                menuViewContList[10].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+                menuViewContList[11].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+                menuViewContList[12].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+                menuViewContList[13].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+                menuViewContList[16].addEventListener("click", function(){
+                    document.querySelectorAll(".btn_group button:first-child").forEach(item=>{
+                        item.classList.add("on");
+                    })
+                })
+            }
         })
 
         const backToTopButton = document.querySelector("#btn_top");
