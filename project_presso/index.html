@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바나프레소</title>
+    <link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <style>
+        .idEnbl {
+            width: 100%;
+            height: 93px;
+            transition: all 0.1s ease 0s;
+            z-index: 101;
+        }
+
+        .hDfwhw {
+            width: 100%;
+            height: 70px;
+            transition: all 0.1s ease 0s;
+            z-index: 101;
+        }
+
+        .dEzzaX {
+            width: 100%;
+            position: sticky;
+            top: 0px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        #wrap .inner {
+            margin: 0 auto
+        }
+
+        #wrap .inner * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box
+        }
+    </style>
+    <style>
+        .cxRRkY {
+            position: absolute;
+            padding: 0px;
+            width: 68px;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+        }
+
+        .eCrSIr {
+            display: block;
+            outline: none;
+            padding: 0px 20px 0px 0px;
+            font-size: 15px;
+            line-height: 41px;
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .eCrSIr:hover {
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+        }
+
+        .eCrSIr::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            width: 8px;
+            height: 1px;
+            background: rgb(119, 119, 119);
+            transform: rotate(45deg);
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .eCrSIr::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -1px;
+            width: 8px;
+            height: 1px;
+            background: rgb(119, 119, 119);
+            transform: rotate(-45deg);
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .dOCgaz {
+            display: block;
+            outline: none;
+            padding: 0px 20px 0px 0px;
+            font-size: 15px;
+            line-height: 41px;
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .dOCgaz::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            width: 8px;
+            height: 1px;
+            background: rgb(119, 119, 119);
+            transform: rotate(-45deg);
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .dOCgaz::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -1px;
+            width: 8px;
+            height: 1px;
+            background: rgb(119, 119, 119);
+            transform: rotate(45deg);
+            transition: all 0.2s ease-in-out 0s;
+        }
+    </style>
+    <style>
+        body {
+            background: #fff;
+            font-family: NanumSquare, sans-serif;
+            min-width: 1340px;
+        }
+
+        blockquote,
+        body,
+        dd,
+        div,
+        dl,
+        dt,
+        fieldset,
+        figure,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        input,
+        li,
+        ol,
+        p,
+        pre,
+        td,
+        textarea,
+        th,
+        ul {
+            -webkit-text-size-adjust: none;
+            color: #333;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0
+        }
+
+        fieldset,
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+
+        dl,
+        li,
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: "";
+            content: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            vertical-align: middle;
+        }
+
+        button {
+            font-family: inherit;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+
+        a {
+            color: #333
+        }
+
+        a,
+        a:active,
+        a:hover {
+            text-decoration: none;
+        }
+
+        address,
+        cite,
+        code,
+        dfn,
+        em,
+        var {
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        caption {
+            border: 0;
+            display: block;
+            left: -9999px;
+            text-indent: 9999px;
+            white-space: nowrap;
+        }
+
+        caption,
+        label,
+        legend {
+            font-size: 0;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+        }
+
+        header {
+            height: 93px;
+            position: static;
+            z-index: 1000
+        }
+
+        header,
+        header .inner {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 1200px
+        }
+
+        header .inner .logo a {
+            display: flex
+        }
+
+        header .menu-list {
+            display: flex;
+            gap: 70px
+        }
+
+        header .menu-list .list-item a {
+            position: relative
+        }
+
+        header .menu-list .list-item a:after {
+            border-bottom: 2px solid #f1648a;
+            bottom: -5px;
+            content: "";
+            left: 0;
+            position: absolute;
+            transition: .5s ease;
+            width: 0
+        }
+
+        header .menu-list .list-item:hover>a {
+            color: #f1648a;
+            font-weight: 700
+        }
+
+        header .menu-list .list-item:hover>a:after {
+            width: 100%
+        }
+
+        header .menu-list .list-item {
+            padding: 34px 0 !important
+        }
+
+        header .menu-list .list-item>a {
+            font-size: 16px
+        }
+
+        header .menu-list .list-item.depth {
+            position: relative
+        }
+
+        header .menu-list .list-item.depth .depth-view {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            display: none;
+            left: 50%;
+            padding: 17px;
+            position: absolute;
+            top: 83px;
+            -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+            width: 150px;
+            z-index: 9999
+        }
+
+        header .menu-list .list-item.depth .depth-view a {
+            border-bottom: 1px solid #e8e8e8;
+            color: #666;
+            display: block;
+            font-size: 14px;
+            margin-bottom: 17px;
+            padding-bottom: 17px;
+            text-align: center
+        }
+
+        header .menu-list .list-item.depth .depth-view li:last-child a {
+            border-bottom: 0;
+            margin: 0;
+            padding: 0
+        }
+
+        header .menu-list .list-item.depth:hover .depth-view {
+            display: block
+        }
+
+        header .menu-list .list-item.depth:hover .depth-view a:hover {
+            color: #000;
+            font-weight: 700
+        }
+
+        .btn_franchisee {
+            align-items: center;
+            background: url(data:image/png;base64,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) 0 0 no-repeat;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 172px;
+            padding-top: 41px;
+            position: fixed;
+            right: 60px;
+            text-align: center;
+            top: 154px;
+            width: 164px;
+            z-index: 1000;
+        }
+
+        footer {
+            background: #fff;
+            border-top: 1px solid #cecece;
+            padding: 60px 0 50px;
+            position: relative;
+        }
+
+        footer .foot_cont {
+            margin: 0 auto;
+            position: relative;
+            width: 1200px;
+        }
+
+        footer .foot_cont address span {
+            color: #333;
+            display: block;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        footer .foot_cont address span b {
+            color: #333;
+            font-weight: 400;
+        }
+
+        footer .foot_cont address span strong b {
+            font-weight: 700;
+        }
+
+        footer .foot_cont .foot_bar {
+            display: inline-block;
+            font-style: italic;
+            height: 10px;
+            line-height: 11px;
+            margin: 0 15px;
+            width: 1px;
+        }
+
+        footer .foot_cont a {
+            color: #333;
+        }
+
+        footer .foot_cont .foot_copy {
+            margin-bottom: 10px;
+        }
+
+        .foot_menu,
+        .foot_menu>li {
+            vertical-align: top;
+        }
+
+        .foot_menu>li {
+            cursor: pointer;
+            display: inline-block;
+            font-size: 15px;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .foot_menu>li:first-child {
+            margin-left: 0;
+        }
+
+        .foot_menu>li>a {
+            display: block;
+            font-size: 15px;
+            line-height: 41px;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+        }
+
+        .foot_menu>li>a:hover {
+            color: #000;
+            font-weight: 700;
+        }
+
+        .foot_menu>li.bold {
+            font-weight: 700;
+        }
+
+        .privacy,
+        .privacy>a {
+            position: relative;
+        }
+
+        .privacy>a {
+            padding-right: 20px;
+            z-index: 1;
+        }
+
+        .privacy>a:after {
+            right: 0;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+        }
+
+        .privacy>a:after,
+        .privacy>a:before {
+            background: #777;
+            content: "";
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+            width: 8px;
+        }
+
+        .privacy>a:before {
+            right: 5px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        }
+
+        .privacy>ul {
+            background: #fff;
+            border: 1px solid #d2d2d2;
+            bottom: 41px;
+            display: none;
+            left: 0;
+            padding: 10px 0;
+            position: absolute;
+            width: 210px;
+            z-index: 10;
+        }
+
+        .privacy>ul li a {
+            display: block;
+            font-size: 13px;
+            line-height: 30px;
+            padding: 0 15px;
+        }
+
+        .privacy>ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .privacy.on>ul {
+            display: block;
+        }
+
+        .privacy.on>a:after {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        }
+
+        .privacy.on>a:before {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+        }
+
+        .btn_top_animation {
+            position: relative;
+            z-index: 200;
+        }
+
+        #btn_top {
+            bottom: 100px;
+            display: none;
+            left: 50%;
+            margin-left: 750px;
+            position: fixed;
+            right: 500px;
+            z-index: 200;
+        }
+
+        #btn_top {
+            display: block;
+            z-index: 50;
+        }
+    </style>
+    <style>
+        .main-menu {
+            align-items: center;
+            background: #98EECC;
+            display: flex;
+            height: 560px;
+        }
+
+        .main-menu:nth-of-type(2) {
+            background: #D0F5BE;
+        }
+
+        .main-menu:nth-of-type(3) {
+            background: #FBFFDC;
+        }
+
+        .main-menu:nth-of-type(4) {
+            background: #A4907C;
+        }
+
+        .main-menu .contents-wrap {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 0 0 0 62px;
+            position: relative;
+            width: 1138px;
+        }
+
+        .main-menu:nth-of-type(2) .contents-wrap,
+        .main-menu:nth-of-type(4) .contents-wrap {
+            flex-direction: row-reverse;
+            padding: 0 62px 0 0;
+        }
+
+        .main-menu .contents-wrap .menu-description .title {
+            color: #603415;
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1.2;
+            word-break: break-all;
+        }
+
+        .main-menu:nth-of-type(2) .contents-wrap .menu-description .title {
+            color: #38757e;
+        }
+
+        .main-menu:nth-of-type(3) .contents-wrap .menu-description .title {
+            color: #80553c;
+        }
+
+        .main-menu:nth-of-type(4) .contents-wrap .menu-description .title {
+            color: #465264;
+        }
+
+        .main-menu .contents-wrap .menu-description .info .name {
+            color: #bc733a;
+            font-size: 46px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-top: 45px;
+        }
+
+        .main-menu:nth-of-type(2) .contents-wrap .menu-description .info .name {
+            color: #4ea3af;
+        }
+
+        .main-menu:nth-of-type(3) .contents-wrap .menu-description .info .name {
+            color: #cb7c4d;
+        }
+
+        .main-menu:nth-of-type(4) .contents-wrap .menu-description .info .name {
+            color: #677d9d;
+        }
+
+        .main-menu .contents-wrap .menu-description .info .description {
+            color: #bc733a;
+            font-size: 22px;
+            line-height: 30px;
+            padding-top: 15px;
+            white-space: pre-line;
+        }
+
+        .main-menu:nth-of-type(2) .contents-wrap .menu-description .info .description {
+            color: #4ea3af;
+        }
+
+        .main-menu:nth-of-type(3) .contents-wrap .menu-description .info .description {
+            color: #cb7c4d;
+        }
+
+        .main-menu:nth-of-type(4) .contents-wrap .menu-description .info .description {
+            color: #677d9d;
+        }
+
+        .main-menu .contents-wrap .menu-description .more-btn {
+            border: 1px solid #bc733a;
+            border-radius: 4px;
+            color: #bc733a;
+            display: block;
+            font-size: 14px;
+            height: 29px;
+            line-height: 29px;
+            margin-top: 30px;
+            text-align: center;
+            width: 60px;
+        }
+
+        .main-menu:nth-of-type(2) .contents-wrap .menu-description .more-btn {
+            border: 1px solid #4ea3af;
+            color: #4ea3af;
+        }
+
+        .main-menu:nth-of-type(3) .contents-wrap .menu-description .more-btn {
+            border: 1px solid #cb7c4d;
+            color: #cb7c4d;
+        }
+
+        .main-menu:nth-of-type(4) .contents-wrap .menu-description .more-btn {
+            border: 1px solid #677d9d;
+            color: #677d9d;
+        }
+
+        .main-menu .contents-wrap .menu-swiper {
+            overflow: hidden;
+            padding: 20px 62px;
+            position: relative;
+            width: 680px;
+        }
+
+        .main-menu .contents-wrap .menu-swiper:after,
+        .main-menu .contents-wrap .menu-swiper:before {
+            background: #98EECC;
+            content: "";
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            z-index: 9;
+        }
+
+        .main-menu:nth-of-type(2) .contents-wrap .menu-swiper:after,
+        .main-menu:nth-of-type(2) .contents-wrap .menu-swiper:before {
+            background: #D0F5BE;
+        }
+
+        .main-menu:nth-of-type(3) .contents-wrap .menu-swiper:after,
+        .main-menu:nth-of-type(3) .contents-wrap .menu-swiper:before {
+            background: #FBFFDC;
+        }
+
+        .main-menu:nth-of-type(4) .contents-wrap .menu-swiper:after,
+        .main-menu:nth-of-type(4) .contents-wrap .menu-swiper:before {
+            background: #A4907C;
+        }
+
+        .main-menu .contents-wrap .menu-swiper:before {
+            left: 0;
+            width: 62px;
+        }
+
+        .swiper {
+            list-style: none;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .swiper-wrapper {
+            box-sizing: content-box;
+            display: flex;
+            height: 100%;
+            position: relative;
+            transition-property: transform;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .main-menu .contents-wrap .menu-swiper .swiper-slide {
+            width: 330px;
+            margin-right: 20px;
+            display: flex;
+        }
+
+        .swiper-slide {
+            flex-shrink: 0;
+            height: 100%;
+            position: relative;
+            /* transition-property: transform; */
+            /* width: 100%; */
+        }
+
+        .main-menu .contents-wrap .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .main-menu .contents-wrap .menu .product-wrap {
+            align-items: center;
+            background: #fff;
+            box-shadow: 6.4px 7.7px 12px 0 rgba(0, 0, 0, .15);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: 330px;
+            justify-content: center;
+            text-align: center;
+            width: 330px;
+        }
+
+        .main-menu .contents-wrap .menu .product-wrap .product {
+            /* transition: 1s ease; */
+            width: 200px;
+        }
+
+        .main-menu .contents-wrap .menu .product-wrap .name-wrap .ko-name {
+            color: #666;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .main-menu .contents-wrap .menu .product-wrap .name-wrap .en-name {
+            color: #666;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        /* .swiper-button-prev {
+            background: url(//resources/img/index/index07.png) no-repeat;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+        }
+
+        .swiper-button-next {
+            background: url(//resources/img/index/index08.png) no-repeat;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+        } */
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="App">
+            <div id="wrap" class="warp_menu">
+                <div id="contents">
+                    <header width="100%" id="header" class="sc-gLLvby dEzzaX sc-fHekdT hDfwhw">
+                        <div class="inner">
+                            <h1 class="logo">
+                                <a href="/">
+                                    <img src="/resources/img/menu/from_open_storage.png" alt="Banapresso">
+                                </a>
+                            </h1>
+                            <ul class="menu-list">
+                                <li class="list-item depth">
+                                    <a href="/brand.html">
+                                        <span>소개</span>
+                                    </a>
+                                    <ul class="depth-view">
+                                        <li class="">
+                                            <a href="/brand.html">
+                                                <span>브랜드 소개</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/app.html">
+                                                <span>앱 소개</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list-item">
+                                    <a href="/menu.html">
+                                        <span>메뉴</span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="/store.html">
+                                        <span>매장 찾기</span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="/news.html">
+                                        <span>소식</span>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="/recruit.html">
+                                        <span>채용</span>
+                                    </a>
+                                </li>
+                                <li class="list-item depth">
+                                    <a href="/menu.html">
+                                        <span>직가맹점</span>
+                                    </a>
+                                    <ul class="depth-view">
+                                        <li class="">
+                                            <a href="/franchise/compete.html">
+                                                <span>브랜드 경쟁력</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/franchise/interior.html">
+                                                <span>인테리어 특장점</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/store/partner.html">
+                                                <span>직영점 입점제안</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/franchise/partner.html">
+                                                <span>가맹점 창업문의</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="btn_franchisee" href="/franchise/partner.html"></a>
+                    </header>
+                    <div class="main-menu">
+                        <div class="contents-wrap">
+                            <div class="menu-description">
+                                <p class="title">NEW MENU</p>
+                                <div class="info">
+                                    <p class="name">리얼 슈퍼콘 출시</p>
+                                    <p class="description">
+                                        토독토독 씹히는
+                                        진짜 옥수수로 만든
+                                        고소&amp;달콤 옥수수 음료
+                                    </p>
+                                </div>
+                                <a href="/menu.html" class="more-btn" role="none">더보기</a>
+                            </div>
+                            <div class="menu-swiper">
+                                <div class="swiper first">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index05.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수크리미라떼</p>
+                                                            <p class="en-name">Sweet Corn Creamy Latte</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index06.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수바나치노</p>
+                                                            <p class="en-name">Sweet Corn Banaccino</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index05.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수크리미라떼</p>
+                                                            <p class="en-name">Sweet Corn Creamy Latte</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index06.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">옥수수바나치노</p>
+                                                            <p class="en-name">Sweet Corn Banaccino</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-menu">
+                        <div class="contents-wrap">
+                            <div class="menu-description">
+                                <p class="title">NEW MENU</p>
+                                <div class="info">
+                                    <p class="name">코코스무디 출시</p>
+                                    <p class="description">
+                                        시원! 달콤! 바삭!
+                                        대치동 인기 메뉴
+                                        이제 전 매장에서 만나요
+                                    </p>
+                                </div>
+                                <a href="/menu.html" class="more-btn" role="none">더보기</a>
+                            </div>
+                            <div class="menu-swiper">
+                                <div class="swiper second">
+                                    <div class="swiper-wrapper" style="width: 330px; margin-right: 20px;">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index09.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">딸기 코코스무디</p>
+                                                            <p class="en-name">Strawberry Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index10.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">피스타치오 코코스무디</p>
+                                                            <p class="en-name">Pistachio Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index11.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">플레인요거트 코코스무디</p>
+                                                            <p class="en-name">Plain Yogurt Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index12.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">망고요거트 코코스무디</p>
+                                                            <p class="en-name">Mango Yogurt Coco Smoothie</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-menu">
+                        <div class="contents-wrap">
+                            <div class="menu-description">
+                                <p class="title">NEW MENU</p>
+                                <div class="info">
+                                    <p class="name">여름 신메뉴 출시</p>
+                                    <p class="description">
+                                        우리 농산물 프로젝트!
+                                        문경이랑 하동에서 왔으예~
+                                    </p>
+                                </div>
+                                <a href="/menu.html" class="more-btn" role="none">더보기</a>
+                            </div>
+                            <div class="menu-swiper">
+                                <div class="swiper third">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index13.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">문경오미자티</p>
+                                                            <p class="en-name">Munkyeong Omija Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index14.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">하동매실피치티</p>
+                                                            <p class="en-name">Hadong Plum Peach Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index13.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">문경오미자티</p>
+                                                            <p class="en-name">Munkyeong Omija Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index14.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">하동매실피치티</p>
+                                                            <p class="en-name">Hadong Plum Peach Tea</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-menu">
+                        <div class="contents-wrap">
+                            <div class="menu-description">
+                                <p class="title">Summer Best</p>
+                                <div class="info">
+                                    <p class="name">수박 생과일 쥬스</p>
+                                    <p class="description">
+                                        국내산 수박을
+                                        통째로 갈아 만든
+                                        100% 수박 쥬스
+                                    </p>
+                                </div>
+                                <a href="/menu.html" class="more-btn" role="none">더보기</a>
+                            </div>
+                            <div class="menu-swiper">
+                                <div class="swiper fourth">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index15.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">수박생과일쥬스</p>
+                                                            <p class="en-name">Watermelon Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index16.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">토마토생과일쥬스</p>
+                                                            <p class="en-name">Tomato Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index15.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">수박생과일쥬스</p>
+                                                            <p class="en-name">Watermelon Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="/menu.html">
+                                                <div class="menu">
+                                                    <div class="product-wrap">
+                                                        <img class="product" src="/resources/img/index/index16.png">
+                                                        <div class="name-wrap">
+                                                            <p class="ko-name">토마토생과일쥬스</p>
+                                                            <p class="en-name">Tomato Fresh Juice</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer width="100%" id="footer" class="sc-eDLJxc diMtfd">
+                    <div width="1200px" class="sc-jTQDnj kylotc">
+                        <button type="button" id="btn_top" class="sc-blmETK eNxgBZ btn_top_animation">
+                            <img src="//resources/img/menu/btn_top.png" alt="TOP" loading="eager" width="68" height="68"
+                                class="sc-iBdmCd blJlrD">
+                        </button>
+                        <div class="foot_cont">
+                            <div class="foot_copy">
+                                <img src="//resources/img/menu/footer_logo.png" alt="banapresso">
+                            </div>
+                            <ul class="foot_menu">
+                                <li class="privacy">
+                                    <button class="sc-ifyqMZ eCrSIr">개인정보처리방침</button>
+                                    <ul>
+                                        <li>
+                                            <a href="/privacy.html">
+                                                바나프레소앱 개인정보 처리방침
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/companyPrivacy.html">
+                                                기업사이트 개인정보 처리방침
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="privacy">
+                                    <button class="sc-ifyqMZ eCrSIr">이용약관</button>
+                                    <ul>
+                                        <li>
+                                            <a href="/termsofservice.html">
+                                                이용약관
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/termsofgift.html">
+                                                충전식 상품권 약관
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/termsofpoint.html">
+                                                잔돈포인트 약관
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="bold">
+                                    <a href="/recruit.html">
+                                        채용
+                                    </a>
+                                </li>
+                                <li class="bold">
+                                    <a href="/store/partner.html">
+                                        입점제안
+                                    </a>
+                                </li>
+                                <li class="bold">
+                                    <a href="/franchise/partner.html">
+                                        가맹점 문의
+                                    </a>
+                                </li>
+                                <li class="bold module-layer-btn">
+                                    <a href="#" role="none">
+                                        제휴 문의
+                                    </a>
+                                </li>
+                                <li class="bold module-layer2-btn">
+                                    <a href="#" role="none">
+                                        매장 이용 및 고객 문의
+                                    </a>
+                                </li>
+                            </ul>
+                            <address>
+                                <span>
+                                    <strong>
+                                        <b>상호명</b> : 주식회사 바나플에프엔비
+                                    </strong>
+                                </span>
+                                <span>
+                                    <b>대표자명</b> : 송민기
+                                    <i class="foot_bar">|</i>
+                                    <b>사업장 소재지</b> : 서울특별시 강남구 테헤란로 81길 9 (삼성동, 바나플빌딩) 3층
+                                    <i class="foot_bar">|</i>
+                                    <b>사업자번호</b> : 358-87-00860
+                                </span>
+                                <span>
+                                    <b>대표전화</b> : 1811-1111
+                                    <i class="foot_bar">|</i>
+                                    <b>Fax </b> : 070-4512-0296
+                                    <i class="foot_bar">|</i>
+                                    <b>이메일</b> :
+                                    <a href="mailto:qna@banapresso.com">
+                                        qna@banapresso.com 또는 1811-1111
+                                    </a>
+                                </span>
+                                <span class="text_copy">
+                                    © banaple F&amp;B. All Rights Reserved.
+                                </span>
+                            </address>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector(".bold.module-layer-btn>a").setAttribute("href", "javascript:void(0)");
+    document.querySelector(".bold.module-layer2-btn>a").setAttribute("href", "javascript:void(0)");
+
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 50) {
+            document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT hDfwhw';
+        } else {
+            document.querySelector("#header").className = 'sc-gLLvby dEzzaX sc-fHekdT idEnbl';
+        }
+    });
+
+    const backToTopButton = document.querySelector("#btn_top");
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    const title_1 = document.querySelector(".privacy>button");
+    const content_1 = document.querySelector(".privacy ul");
+    const content_2 = document.querySelector(".privacy:nth-child(2) ul");
+    const title_2 = document.querySelector(".privacy:nth-child(2)>button");
+    function handleClick() {
+        if (title_1.className === 'sc-ifyqMZ eCrSIr') {
+            title_1.className = 'sc-ifyqMZ dOCgaz';
+            content_1.style.display = "block";
+            content_2.style.display = "none";
+            if (content_2.style.display === "none") {
+                title_2.className = 'sc-ifyqMZ eCrSIr';
+            }
+        } else if (title_1.className === 'sc-ifyqMZ dOCgaz') {
+            title_1.className = 'sc-ifyqMZ eCrSIr';
+            content_1.style.display = "none";
+        }
+    }
+    title_1.addEventListener('click', handleClick);
+    function handleClick2() {
+        if (title_2.className === 'sc-ifyqMZ eCrSIr') {
+            title_2.className = 'sc-ifyqMZ dOCgaz';
+            content_2.style.display = "block";
+            content_1.style.display = "none";
+            if (content_1.style.display === "none") {
+                title_1.className = 'sc-ifyqMZ eCrSIr';
+            }
+        } else if (title_2.className === 'sc-ifyqMZ dOCgaz') {
+            title_2.className = 'sc-ifyqMZ eCrSIr';
+            content_2.style.display = "none";
+        }
+    }
+    title_2.addEventListener('click', handleClick2);
+</script>
+<script>
+    var swiper = new Swiper('.swiper.first', {
+        loop: true,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
+    });
+
+    new Swiper('.swiper.second', {
+        loop: true,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
+    });
+
+    new Swiper('.swiper.third', {
+        loop: true,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
+    });
+
+    new Swiper('.swiper.fourth', {
+        loop: true,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        }
+    });
+</script>
+
+</html>

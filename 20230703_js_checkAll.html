@@ -81,7 +81,8 @@
      /* 11. 선택해제 이벤트 처리 handler */
      function btnUncheckHandler(){
         console.log("btnUncheckHandler");
-        console.log(this);
+        // console.log(this);
+        console.log($(this).parent().data("id"));
     }
 
     /* 3. 전체선택 이벤트 처리 Handler */
