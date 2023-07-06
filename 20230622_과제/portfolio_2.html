@@ -60,18 +60,33 @@
         }
 
         function blurs1() {
+            var id = document.querySelector("#id");
             var required1 = document.querySelector(".required1");
-            required1.innerText = "필수 입력 항목입니다.";
+            if(id.value == "") {
+                required1.innerText = "필수 입력 항목입니다.";
+            } else {
+                required1.innerText = "";
+            }
         }
 
         function blurs2() {
+            var pw = document.querySelector("#pw");
             var required2 = document.querySelector(".msg");
-            required2.innerText = "필수 입력 항목입니다.";
+            if(pw.value == "" || pw.value == "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자") {
+                required2.innerText = "필수 입력 항목입니다.";
+            } else {
+                msg.innerText = "";
+            }
         }
 
         function blurs3() {
+            var pwCheck = document.querySelector("#pwCheck");
             var required3 = document.querySelector(".required3");
-            required3.innerText = "필수 입력 항목입니다.";
+            if(pwCheck.value == "") {
+                required3.innerText = "필수 입력 항목입니다.";
+            } else {
+                required3.innerText = "";
+            }
         }
 
         function check() {
