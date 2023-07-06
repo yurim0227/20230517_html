@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        html {
+            background-color: #CEECF5;
+        }
+
+        form {
+            background-color: #F2F2F2;
+            display: table;
+            margin: 0 auto;
+            border: 2px solid #d8d8d8;
+            width: 350px;
+            height: 375px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            background-color: #F2F2F2;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: dashed;
+            border-color: gray;
+        }
+
+        p {
+            font-size: 1px;
+            color: gray;
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: #BCF5A9;
+            color: green;
+            border: none;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        tr:nth-child(7) p {
+            font-size: 5px;
+        }
+
+        tr:nth-child(8)>td {
+            height: 50px;
+        }
+
+        tr>td:nth-child(1) {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function focuses() {
+            var msg = document.querySelector(".msg");
+            msg.innerText = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
+        }
+
+        function blurs() {
+            var required = document.querySelector(".required");
+            required.innerText = "필수 입력 항목입니다.";
+        }
+
+        function check() {
+            var id = document.querySelector("#id");
+            var required = document.querySelector(".required");
+            if(id.value == "") {
+                required.innerText = "필수 입력 항목입니다.";
+                id.focus();
+                return;
+            }
+
+            var pw = document.querySelector("#pw");
+            var required = document.querySelector(".required");
+            if(pw.value == "") {
+                required.innerText = "필수 입력 항목입니다.";
+                pw.focus();
+                return;
+            }
+
+            var pwCheck = document.querySelector("#pwCheck");
+            var required = document.querySelector(".required");
+            if(pwCheck.value == "") {
+                required.innerText = "필수 입력 항목입니다.";
+                pwCheck.focus();
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            <table id="info">
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" id="id" size="23" onblur="blurs()" required></td>
+                </tr>
+                <tr>
+                    <td>패스워드</td>
+                    <td><input type="password" id="pw" size="23" onfocus="focuses()" onblur="blurs()" required></td>
+                </tr>
+                <tr>
+                    <td><p>&nbsp;</p></td>
+                    <td><p class="msg">&nbsp;</p></td>
+                </tr>
+                <tr>
+                    <td>패스워드 확인</td>
+                    <td><input type="password" id="pwCheck" size="23" onblur="blurs()" required></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="text" size="8">@<input type="text" size="8"></td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td>
+                        <input type="text" size="23">
+                        <br>
+                        <input type="text" size="23">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>&nbsp;</p></td>
+                    <td><p class="required">&nbsp;</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" onclick="check()">가입</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <!-- <script>
+        var msgFocus = document.querySelector("#pw");
+        msgFocus.addEventListener("focus", function(){
+            msgFocus.innerText = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
+        });
+    </script> -->
+</body>
+</html>
