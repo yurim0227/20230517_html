@@ -14,8 +14,8 @@
             display: table;
             margin: 0 auto;
             border: 2px solid #d8d8d8;
-            width: 350px;
-            height: 375px;
+            width: 400px;
+            height: 450px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -45,16 +45,12 @@
             font-size: large;
         }
 
-        tr:nth-child(7) p {
-            font-size: 5px;
-        }
-
-        tr:nth-child(8)>td {
-            height: 50px;
-        }
-
         tr>td:nth-child(1) {
             font-weight: bold;
+        }
+
+        .last {
+            height: 50px;
         }
     </style>
     <script>
@@ -63,9 +59,19 @@
             msg.innerText = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
         }
 
-        function blurs() {
-            var required = document.querySelector(".required");
-            required.innerText = "필수 입력 항목입니다.";
+        function blurs1() {
+            var required1 = document.querySelector(".required1");
+            required1.innerText = "필수 입력 항목입니다.";
+        }
+
+        function blurs2() {
+            var required2 = document.querySelector(".msg");
+            required2.innerText = "필수 입력 항목입니다.";
+        }
+
+        function blurs3() {
+            var required3 = document.querySelector(".required3");
+            required3.innerText = "필수 입력 항목입니다.";
         }
 
         function check() {
@@ -101,11 +107,15 @@
             <table id="info">
                 <tr>
                     <td>아이디</td>
-                    <td><input type="text" id="id" size="23" onblur="blurs()" required></td>
+                    <td><input type="text" id="id" size="23" onblur="blurs1()" required></td>
+                </tr>
+                <tr>
+                    <td><p>&nbsp;</p></td>
+                    <td><p class="required1">&nbsp;</p></td>
                 </tr>
                 <tr>
                     <td>패스워드</td>
-                    <td><input type="password" id="pw" size="23" onfocus="focuses()" onblur="blurs()" required></td>
+                    <td><input type="password" id="pw" size="23" onfocus="focuses()" onblur="blurs2()" required></td>
                 </tr>
                 <tr>
                     <td><p>&nbsp;</p></td>
@@ -113,26 +123,38 @@
                 </tr>
                 <tr>
                     <td>패스워드 확인</td>
-                    <td><input type="password" id="pwCheck" size="23" onblur="blurs()" required></td>
+                    <td><input type="password" id="pwCheck" size="23" onblur="blurs3()" required></td>
+                </tr>
+                <tr>
+                    <td><p>&nbsp;</p></td>
+                    <td><p class="required3">&nbsp;</p></td>
                 </tr>
                 <tr>
                     <td>이메일</td>
                     <td><input type="text" size="8">@<input type="text" size="8"></td>
                 </tr>
                 <tr>
+                    <td><p>&nbsp;</p></td>
+                    <td><p>&nbsp;</p></td>
+                </tr>
+                <tr>
                     <td>주소</td>
                     <td>
                         <input type="text" size="23">
-                        <br>
+                        <br><br>
                         <input type="text" size="23">
                     </td>
                 </tr>
                 <tr>
                     <td><p>&nbsp;</p></td>
-                    <td><p class="required">&nbsp;</p></td>
+                    <td><p>&nbsp;</p></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button type="button" onclick="check()">가입</button></td>
+                    <td><p>&nbsp;</p></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="last" colspan="2"><button type="button" onclick="check()">가입</button></td>
                 </tr>
             </table>
         </div>
