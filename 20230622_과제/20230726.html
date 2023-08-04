@@ -1911,7 +1911,7 @@
                             <div class="join">
                                 <div id="M_Alert" style="display: block;">
                                     좋은 일을 찾으시나요? 회원가입하시고 다양한 혜택을 누리세요!
-                                    <a href="https://www.jobkorea.co.kr/Join/M_Regist" target="_new">회원가입</a>
+                                    <a href="/20230622_과제/20230726_2.html" target="_new">회원가입</a>
                                 </div>
                                 <div id="Co_Alert" style="display: none;">
                                     좋은 인재를 구하시나요? 회원가입하시고 다양한 혜택을 누리세요!
@@ -2044,6 +2044,20 @@
         </div><!-- footer //-->
 
     </div>
+    <script>
+        document.querySelector("#devMemTab>li:first-child").addEventListener("click", function(){
+                document.querySelector("#devMemTab>li:first-child").classList.add("on");
+                document.querySelector("#devMemTab>li:nth-child(2)").classList.remove("on");
+                document.querySelector("#M_Alert").style.display = "block";
+                document.querySelector("#Co_Alert").style.display = "none";
+        })
+        document.querySelector("#devMemTab>li:nth-child(2)").addEventListener("click", function(){
+                document.querySelector("#devMemTab>li:first-child").classList.remove("on");
+                document.querySelector("#devMemTab>li:nth-child(2)").classList.add("on");
+                document.querySelector("#M_Alert").style.display = "none";
+                document.querySelector("#Co_Alert").style.display = "block";
+        })
+    </script>
 </body>
 
 </html>
