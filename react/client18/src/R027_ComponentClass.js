@@ -4,16 +4,17 @@ class R027_ComponentClass extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      StateString: 'react',
-      StateArrayObj: ['react', { react: '200' }]
+      StateString: 'reacta',
+      StateArrayObj: ['reactb', { react: '200c' }]
     }
   }
 
   buttonClick = (type) => {
+    console.log("여기buttonClick");
     if(type === 'String'){
-      this.setState({ StateString: 'react' });
+      this.setState({ StateString: 'reactd' });
     }else{
-      this.setState({ StateArrayObj: ['react', { react: '200' }] });
+      this.setState({ StateArrayObj: ['reacte', { react: '200f' }] });
     }
   }
 
@@ -21,8 +22,8 @@ class R027_ComponentClass extends Component {
     console.log('render() 실행')
     return (
       <div>
-        <button onClick={e => this.buttonClick('String')}>문자열 변경</button>
-        <button onClick={e => this.buttonClick('ArrayObject')}>객체 배열 변경</button>
+        <button onClick={e => this.buttonClick('String')}>{this.state.StateString}</button>
+        <button onClick={e => this.buttonClick('ArrayObject')}>{this.state.StateArrayObj[1].react}</button>
       </div>
     )
   }
