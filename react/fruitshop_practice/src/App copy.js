@@ -1,145 +1,275 @@
-import './App.css';
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-import {useState} from 'react';
+import React, { useState } from 'react';
 
-function App() {
-  const [newFruit, setNewFruit] = useState(
-    {
-      name : "",
-      price : "",
-      amount : ""
-    }
-  );
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-  const [fruitList, setFruitList] = useState(
-    [
-      {
-        name : "딸기",
-        price : "1000",
-        amount : "10"
-      },
-      {
-        name : "바나나",
-        price : "2000",
-        amount : "20"
-      }
-    ]
-  );
+import "./App.css";
 
-  const Home = ()=>{
-    return(
-      <>
-        <h1>홈</h1>
-        <nav>
-          <ul>
-            <li><Link to="/list">과일목록</Link></li>
-            <li><Link to="/insert">과일추가</Link></li>
-          </ul>
-        </nav>
-      </>
-    );
-  }
+const App = () => {
 
-  const List = ()=>{
-    return(
-      <>
-        <h1>과일목록</h1>
-        <nav>
-          <ul>
-            <li><Link to="/insert">과일추가</Link></li>
-            <li><Link to="/">홈</Link></li>
-          </ul>
-        </nav>
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th>이름</th>
-                <th>가격</th>
-                <th>수량</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                fruitList.map(
-                  (fruit)=>{
-                    return(
-                      <tr>
-                        <td>{fruit.name}</td>
-                        <td>{fruit.price}</td>
-                        <td>{fruit.amount}</td>
-                        <td><button onClick={()=>{onClickDeleteHandler(fruit.name);}}>삭제</button></td>
-                      </tr>
-                    )
-                  }
-                )
-              }
-            </tbody>
-          </table>
-        </div>
-      </>
-    );
-  }
+const [movies, setMovies] = useState([
 
-  const Insert = ()=>{
-    return(
-      <>
-        <h1>과일추가</h1>
-        <nav>
-          <ul>
-            <li><Link to="/list">과일목록</Link></li>
-            <li><Link to="/">홈</Link></li>
-          </ul>
-        </nav>
-        <div>
-          <div><span>이름</span><input onChange={onChangeHandler} name="name" value={newFruit.name}></input></div>
-          <div><span>가격</span><input onChange={onChangeHandler} name="price" value={newFruit.price}></input></div>
-          <div><span>수량</span><input onChange={onChangeHandler} name="amount" value={newFruit.amount}></input></div>
-          <div><button onClick={onClickHandler}>등록</button></div>
-        </div>
-        <List></List>
-      </>
-    );
-  }
+{ id: 1, title: 'Movie 1', genre: 'Drama', release_date: '2022-01-01' },
 
-  const onClickDeleteHandler = (name)=>{
-    const filteredFruitList = fruitList.filter((fruit)=>fruit.name !== name);
-    setFruitList(filteredFruitList);
-  }
+{ id: 2, title: 'Movie 2', genre: 'Action', release_date: '2022-02-01' },
 
-  const onClickHandler = ()=>{
-    if(!newFruit.name || !newFruit.price || !newFruit.amount ){
-      alert("모든값을 입력해주세요.");
-      return;
-    }
+{ id: 3, title: 'Movie 3', genre: 'Comedy', release_date: '2022-03-01' },
 
-    const isExist = fruitList.some((fruit)=>fruit.name === newFruit.name);
-    if(isExist){
-      alert("이미 등록된 과일이름입니다. 다시 추가해주세요.");
-      setFruitList({...newFruit, ["name"]:""});
-      return;
-    }
+]);
 
-    setFruitList([...fruitList, newFruit]);
-    setNewFruit({name : "", price : "", amount : ""});
-  }
+const [newMovie, setNewMovie] = useState({
 
-  const onChangeHandler = (event)=>{
-    const {name, value} = event.target;
-    setNewFruit({...newFruit, [name]:value});
-  }
+id: '',
 
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path='/' element={<Home></Home>} />
-          <Route path='/list' element={<List></List>} />
-          <Route path='/insert' element={<Insert></Insert>} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+title: '',
+
+genre: '',
+
+release_date: '',
+
+});
+
+const handleInputChange = (event) => {
+
+const { name, value } = event.target;
+
+setNewMovie({ ...newMovie, [name]: value });
+
+};
+
+const handleAddMovie = () => {
+
+if (!newMovie.id || !newMovie.title || !newMovie.genre || !newMovie.release_date) {
+
+alert('모든 입력값을 채워주세요.');
+
+return;
+
 }
+
+const isDuplicate = movies.some(movie => String(movie.id) === newMovie.id);
+
+if (isDuplicate) {
+
+alert('이미 존재하는 ID입니다.');
+
+setNewMovie({ ...newMovie, ['id']: '' });
+
+return;
+
+}
+
+setMovies([...movies, newMovie]);
+
+setNewMovie({ id: '', title: '', genre: '', release_date: '' });
+
+};
+
+const handleDeleteMovie = (id) => {
+
+const updatedMovies = movies.filter((movie) => movie.id !== id);
+
+setMovies(updatedMovies);
+
+};
+
+return (
+
+<Router>
+
+<div className='container'>
+
+<nav>
+
+<ul>
+
+<li>
+
+<Link to="/">List</Link>
+
+</li>
+
+<li>
+
+<Link to="/create">Add New Movie</Link>
+
+</li>
+
+</ul>
+
+</nav>
+
+<Routes>
+
+<Route path="/" element={<Home movies={movies} onDeleteMovie={handleDeleteMovie} />} />
+
+<Route path="/create" element={<CreateMovie newMovie={newMovie} onInputChange={handleInputChange} onAddMovie={handleAddMovie} />} />
+
+</Routes>
+
+</div>
+
+</Router>
+
+);
+
+};
+
+const Home = (props) => {
+
+const { movies, onDeleteMovie } = props;
+
+return (
+
+<div>
+
+<h1>Movies</h1>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Title</th>
+
+<th>Genre</th>
+
+<th>Release Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{movies.map((movie) => (
+
+<tr key={movie.id}>
+
+<td>{movie.id}</td>
+
+<td>{movie.title}</td>
+
+<td>{movie.genre}</td>
+
+<td>{movie.release_date}</td>
+
+<td>
+
+<button onClick={() => onDeleteMovie(movie.id)}>Delete</button>
+
+</td>
+
+</tr>
+
+))}
+
+</tbody>
+
+</table>
+
+</div>
+
+);
+
+};
+
+const CreateMovie = (props) => {
+
+const { newMovie, onInputChange, onAddMovie } = props;
+
+return (
+
+<div>
+
+<h1>Create Movie</h1>
+
+<form>
+
+<div>
+
+<input
+
+type="number"
+
+name="id"
+
+value={newMovie.id}
+
+onChange={onInputChange}
+
+placeholder="Input movie id"
+
+/>
+
+</div>
+
+<div>
+
+<input
+
+type="text"
+
+name="title"
+
+value={newMovie.title}
+
+onChange={onInputChange}
+
+placeholder="Input movie title"
+
+/>
+
+</div>
+
+<div>
+
+<input
+
+type="text"
+
+name="genre"
+
+value={newMovie.genre}
+
+onChange={onInputChange}
+
+placeholder="Input movie genre"
+
+/>
+
+</div>
+
+<div>
+
+<label>출시일 : </label>
+
+<input
+
+type="date"
+
+name="release_date"
+
+value={newMovie.release_date}
+
+onChange={onInputChange}
+
+/>
+
+</div>
+
+</form>
+
+<button onClick={onAddMovie}>Add Movie</button>
+
+</div>
+
+);
+
+};
 
 export default App;
